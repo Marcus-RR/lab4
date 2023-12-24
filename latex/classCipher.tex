@@ -1,0 +1,204 @@
+\hypertarget{classCipher}{}\doxysection{Класс Cipher}
+\label{classCipher}\index{Cipher@{Cipher}}
+
+
+{\ttfamily \#include $<$Cipher.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCipher_ae728d0917db639dd49638a268298391f}{Cipher}} ()=delete
+\item 
+\mbox{\hyperlink{classCipher_aa600f40a7856ca58974d07dda7f3f0c4}{Cipher}} (const std\+::wstring \&skey)
+\begin{DoxyCompactList}\small\item\em Конструктор для создания объекта, хранящего в себе ключ шифрования \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classCipher_a0b3fc6d27b73820e6a5c1405de909e4b}{encrypt}} (const std\+::wstring \&open\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Зашифрование \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classCipher_ac7676d30ce3c89114abbf4f0a57ec583}{decrypt}} (const std\+::wstring \&cipher\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Расшифровывание \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classCipher_a21f49c98cfe11de69e16f32478d82eed}{convert}} (const std\+::wstring \&s)
+\item 
+std\+::wstring \mbox{\hyperlink{classCipher_a3777899ce0e87b28ec22b998b1b6e7e3}{convert}} (const std\+::vector$<$ int $>$ \&v)
+\item 
+std\+::wstring \mbox{\hyperlink{classCipher_a88b4aa534605cf8ed6e0215297212949}{get\+Valid\+Key}} (const std\+::wstring \&s)
+\begin{DoxyCompactList}\small\item\em Метод класса, проверяющий ключ на валидность \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classCipher_aa0c08520490b489c4386f159ccbd2dd1}{get\+Valid\+Open\+Text}} (const std\+::wstring \&s)
+\begin{DoxyCompactList}\small\item\em Метод класса, проверяющий текс на валидность \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classCipher_aec10160bd52a01b5b4c4689568d32b94}{get\+Valid\+Cipher\+Text}} (const std\+::wstring \&s)
+\begin{DoxyCompactList}\small\item\em Метод класса, проверяющий расшифрованный текст на валидность \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::wstring \mbox{\hyperlink{classCipher_a74864cd223538f177d010530c2819388}{num\+Alpha}} = L\char`\"{}АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\char`\"{}
+\item 
+std\+::map$<$ char, int $>$ \mbox{\hyperlink{classCipher_ae14a995485f4f56572096cb9538345f7}{alpha\+Num}}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classCipher_a7f59d59bc121ae21dfe1f2ffb60c0753}{key}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+\begin{DoxyAuthor}{Автор}
+Belov I.\+A. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Версия}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classCipher_ae728d0917db639dd49638a268298391f}\label{classCipher_ae728d0917db639dd49638a268298391f}} 
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{Cipher()}{Cipher()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cipher\+::\+Cipher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classCipher_aa600f40a7856ca58974d07dda7f3f0c4}\label{classCipher_aa600f40a7856ca58974d07dda7f3f0c4}} 
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\index{Cipher@{Cipher}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{Cipher()}{Cipher()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cipher\+::\+Cipher (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{skey }\end{DoxyParamCaption})}
+
+
+
+Конструктор для создания объекта, хранящего в себе ключ шифрования 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em text} & Открытый текст на русском языке @warnings Текс не должен быть пустоц строкой и не должен содержать пробелы. В тексте могут содержаться знаки перпинания и цифры. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classCipher_a3777899ce0e87b28ec22b998b1b6e7e3}\label{classCipher_a3777899ce0e87b28ec22b998b1b6e7e3}} 
+\index{Cipher@{Cipher}!convert@{convert}}
+\index{convert@{convert}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::convert (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCipher_a21f49c98cfe11de69e16f32478d82eed}\label{classCipher_a21f49c98cfe11de69e16f32478d82eed}} 
+\index{Cipher@{Cipher}!convert@{convert}}
+\index{convert@{convert}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Cipher\+::convert (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCipher_ac7676d30ce3c89114abbf4f0a57ec583}\label{classCipher_ac7676d30ce3c89114abbf4f0a57ec583}} 
+\index{Cipher@{Cipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{cipher\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Расшифровывание 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em text} & Расшифрованный текст на русском языке @warnings Текс не должен быть пустоц строкой. В тексте могут содержаться знаки перпинания и цифры. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result Зашифрованный текст 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_a0b3fc6d27b73820e6a5c1405de909e4b}\label{classCipher_a0b3fc6d27b73820e6a5c1405de909e4b}} 
+\index{Cipher@{Cipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::encrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{open\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Зашифрование 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em text} & Открытый текст на русском языке @warnings Текс не должен быть пустоц строкой. В тексте могут содержаться знаки перпинания и цифры. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result Зашифрованный текст 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_aec10160bd52a01b5b4c4689568d32b94}\label{classCipher_aec10160bd52a01b5b4c4689568d32b94}} 
+\index{Cipher@{Cipher}!getValidCipherText@{getValidCipherText}}
+\index{getValidCipherText@{getValidCipherText}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{getValidCipherText()}{getValidCipherText()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::get\+Valid\+Cipher\+Text (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Метод класса, проверяющий расшифрованный текст на валидность 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s} & Зашифрованный текст на русском языке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_a88b4aa534605cf8ed6e0215297212949}\label{classCipher_a88b4aa534605cf8ed6e0215297212949}} 
+\index{Cipher@{Cipher}!getValidKey@{getValidKey}}
+\index{getValidKey@{getValidKey}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{getValidKey()}{getValidKey()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::get\+Valid\+Key (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Метод класса, проверяющий ключ на валидность 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s} & Ключ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCipher_aa0c08520490b489c4386f159ccbd2dd1}\label{classCipher_aa0c08520490b489c4386f159ccbd2dd1}} 
+\index{Cipher@{Cipher}!getValidOpenText@{getValidOpenText}}
+\index{getValidOpenText@{getValidOpenText}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{getValidOpenText()}{getValidOpenText()}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::get\+Valid\+Open\+Text (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Метод класса, проверяющий текс на валидность 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em s} & Текст на русском языке \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+result 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classCipher_ae14a995485f4f56572096cb9538345f7}\label{classCipher_ae14a995485f4f56572096cb9538345f7}} 
+\index{Cipher@{Cipher}!alphaNum@{alphaNum}}
+\index{alphaNum@{alphaNum}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{alphaNum}{alphaNum}}
+{\footnotesize\ttfamily std\+::map$<$char,int$>$ Cipher\+::alpha\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCipher_a7f59d59bc121ae21dfe1f2ffb60c0753}\label{classCipher_a7f59d59bc121ae21dfe1f2ffb60c0753}} 
+\index{Cipher@{Cipher}!key@{key}}
+\index{key@{key}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Cipher\+::key\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCipher_a74864cd223538f177d010530c2819388}\label{classCipher_a74864cd223538f177d010530c2819388}} 
+\index{Cipher@{Cipher}!numAlpha@{numAlpha}}
+\index{numAlpha@{numAlpha}!Cipher@{Cipher}}
+\doxysubsubsection{\texorpdfstring{numAlpha}{numAlpha}}
+{\footnotesize\ttfamily std\+::wstring Cipher\+::num\+Alpha = L\char`\"{}АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Cipher_8h}{Cipher.\+h}}\item 
+\mbox{\hyperlink{Cipher_8cpp}{Cipher.\+cpp}}\end{DoxyCompactItemize}
